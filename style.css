@@ -417,7 +417,7 @@ h1 {
 }
 
 .arrow-icon::after {
-    content: "→";
+    content: "-->";
     font-size: 1.2rem;
 }
 
