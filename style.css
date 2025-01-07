@@ -536,3 +536,6 @@ h1 {
 .footer a:hover {
     text-decoration: underline;
 }
+.checked{
+    color: #c8ff00;
+}
