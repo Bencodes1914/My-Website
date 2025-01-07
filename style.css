@@ -538,4 +538,6 @@ h1 {
 }
 .checked{
     color: #c8ff00;
+    width: 20px;
+    height: 20px;
 }
