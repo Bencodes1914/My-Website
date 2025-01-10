@@ -521,7 +521,7 @@ h1 {
     width: 24px;
     height: 24px;
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.2s;
