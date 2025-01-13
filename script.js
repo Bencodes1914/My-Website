@@ -33,9 +33,44 @@ function switchLanguage(lang) {
         // You can add translations here
     }
 }
-// Added a cursor follower
-const circle = document.querySelector('.cursor-follower');
-    
-document.addEventListener('mousemove', (e) => {
-  circle.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-});
+
+
+import React, { useState, useEffect } from 'react';
+
+const CursorFollower = () => {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const updatePosition = (e) => {
+      setPosition({ x: e.clientX, y: e.clientY });
+      setIsVisible(true);
+    };
+
+    const handleMouseLeave = () => {
+      setIsVisible(false);
+    };
+
+    window.addEventListener('mousemove', updatePosition);
+    document.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      window.removeEventListener('mousemove', updatePosition);
+      document.addEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
+
+  return (
+    <div 
+      className="fixed pointer-events-none transition-all duration-100 ease-out"
+      style={{
+        transform: `translate(${position.x + 20}px, ${position.y + 20}px)`,
+        opacity: isVisible ? 1 : 0,
+      }}
+    >
+      <div className="w-6 h-6 rounded-full bg-green-500 opacity-70"></div>
+    </div>
+  );
+};
+
+export default CursorFollower;
