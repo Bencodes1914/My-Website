@@ -35,20 +35,15 @@ function switchLanguage(lang) {
 }
 
 
- // Add console.log to verify script is running
- console.log('Script is running');
-
- const circle = document.querySelector('.cursor-follower');
- 
- // Add console.log to verify circle is found
- console.log('Circle element:', circle);
-
- document.addEventListener('mousemove', (e) => {
-     // Add console.log to verify mouse movement is detected
-     console.log('Mouse moved:', e.clientX, e.clientY);
-     
-     // Added small offset so circle doesn't center on cursor
-     const x = e.clientX - 10;
-     const y = e.clientY - 10;
-     circle.style.transform = `translate(${x}px, ${y}px)`;
- });
+const circle = document.querySelector('.cursor-follower');
+        
+        document.addEventListener('mousemove', (e) => {
+            // Using pageX and pageY instead of clientX and clientY
+            // This accounts for scrolling
+            const x = e.pageX - 10;
+            const y = e.pageY - 10;
+            
+            // Using left/top instead of transform
+            circle.style.left = x + 'px';
+            circle.style.top = y + 'px';
+        });

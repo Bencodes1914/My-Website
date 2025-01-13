@@ -550,7 +550,7 @@ h1 {
     height: 20px;
 }    
  .test-element {
-    background-color: red;
+    background-color: blue;
     padding: 20px;
     margin: 20px;
 }
@@ -560,10 +560,7 @@ h1 {
     height: 20px;
     background-color: blue;
     border-radius: 50%;
-    position: fixed;
+    position: absolute;  /* Changed from fixed to absolute */
     pointer-events: none;
-    /* Removed transition temporarily for testing */
-    
-    /* Added to ensure circle isn't hidden */
     z-index: 9999;
 }
