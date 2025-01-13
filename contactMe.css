@@ -315,3 +315,22 @@
         height: 18px;
     }
 }
+.cursor-follower {
+    width: 20px;
+    height: 20px;
+    background-color: #6366f1;  /* Indigo color */
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 9999;
+    
+    /* Smooth transition */
+    transition: all 0.15s ease-out;
+    
+    /* Glow effect */
+    box-shadow: 0 0 15px 3px rgba(99, 102, 241, 0.6),   /* Outer glow */
+               0 0 5px 2px rgba(99, 102, 241, 0.4);     /* Inner glow */
+    
+    /* Optional: slight transparency to make it less harsh */
+    opacity: 0.9;
+}
