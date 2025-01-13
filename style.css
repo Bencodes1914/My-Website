@@ -14,7 +14,7 @@ body {
 .container {
     max-width: 1500px;
     margin: 0 auto;
-    min-height: 100vh;
+    min-height: 90vh;
     position: relative;
 }
 
