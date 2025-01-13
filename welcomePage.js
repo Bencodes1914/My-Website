@@ -49,3 +49,9 @@ const menuButton = document.querySelector('.menu-button');
         ctaButton.addEventListener('mouseleave', () => {
             ctaButton.style.transform = 'translateY(0)';
         });
+        // Added a cursor follower
+        const circle = document.querySelector('.cursor-follower');
+    
+        document.addEventListener('mousemove', (e) => {
+          circle.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        });

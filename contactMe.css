@@ -315,3 +315,13 @@
         height: 18px;
     }
 }
+.cursor-follower {
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0.7;
+    transition: transform 0.1s;
+  }
