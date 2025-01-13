@@ -548,4 +548,22 @@ h1 {
     color: #c8ff00;
     width: 20px;
     height: 20px;
+}    
+ .test-element {
+    background-color: red;
+    padding: 20px;
+    margin: 20px;
+}
+
+.cursor-follower {
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    /* Removed transition temporarily for testing */
+    
+    /* Added to ensure circle isn't hidden */
+    z-index: 9999;
 }

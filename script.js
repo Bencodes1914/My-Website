@@ -35,42 +35,20 @@ function switchLanguage(lang) {
 }
 
 
-import React, { useState, useEffect } from 'react';
+ // Add console.log to verify script is running
+ console.log('Script is running');
 
-const CursorFollower = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [isVisible, setIsVisible] = useState(false);
+ const circle = document.querySelector('.cursor-follower');
+ 
+ // Add console.log to verify circle is found
+ console.log('Circle element:', circle);
 
-  useEffect(() => {
-    const updatePosition = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-      setIsVisible(true);
-    };
-
-    const handleMouseLeave = () => {
-      setIsVisible(false);
-    };
-
-    window.addEventListener('mousemove', updatePosition);
-    document.addEventListener('mouseleave', handleMouseLeave);
-
-    return () => {
-      window.removeEventListener('mousemove', updatePosition);
-      document.addEventListener('mouseleave', handleMouseLeave);
-    };
-  }, []);
-
-  return (
-    <div 
-      className="fixed pointer-events-none transition-all duration-100 ease-out"
-      style={{
-        transform: `translate(${position.x + 20}px, ${position.y + 20}px)`,
-        opacity: isVisible ? 1 : 0,
-      }}
-    >
-      <div className="w-6 h-6 rounded-full bg-green-500 opacity-70"></div>
-    </div>
-  );
-};
-
-export default CursorFollower;
+ document.addEventListener('mousemove', (e) => {
+     // Add console.log to verify mouse movement is detected
+     console.log('Mouse moved:', e.clientX, e.clientY);
+     
+     // Added small offset so circle doesn't center on cursor
+     const x = e.clientX - 10;
+     const y = e.clientY - 10;
+     circle.style.transform = `translate(${x}px, ${y}px)`;
+ });
