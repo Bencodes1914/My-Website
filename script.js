@@ -13,17 +13,18 @@ document.querySelectorAll('.question-item').forEach(button => {
         container.classList.toggle('active');
     });
 });
-function switchTheme(lang) {
+function switchTheme(theme) {
     // Remove active class from all buttons
     document.querySelectorAll('.theme-switch button').forEach(btn => {
         btn.classList.remove('active');
     });
 
     // Add active class to clicked button
-    document.getElementById(`${lang}Btn`).classList.add('active');
+    const themeLowerCase = theme.toLowerCase();
+    document.getElementById(`${themeLowerCase}Btn`).classList.add('active');
 
     // Here you can add your language switching logic
-    if (lang === 'light') {
+    if (theme === 'light') {
         // Switch content to Russian
         console.log('Switching to Light Theme');
         // You can add translations here
