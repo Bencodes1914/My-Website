@@ -568,3 +568,73 @@ h1 {
     /* Optional: slight transparency to make it less harsh */
     opacity: 0.9;
 }
+
+.theme-container {
+    min-height: 100vh;
+    padding: 2rem;
+    transition: background-color 0.2s, color 0.2s;
+    background-color: white;
+    color: rgb(15, 23, 42);
+}
+
+.theme-container.dark-theme {
+    background-color: rgb(15, 23, 42);
+    color: white;
+}
+
+.theme-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.theme-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.theme-toggle-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.theme-toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid currentColor;
+    border-radius: 0.375rem;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+.theme-toggle-btn.light-mode-active {
+    background-color: rgb(226, 232, 240);
+}
+
+.theme-toggle-btn.dark-mode-active {
+    background-color: rgb(51, 65, 85);
+}
+
+.theme-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.theme-content-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.theme-content-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}

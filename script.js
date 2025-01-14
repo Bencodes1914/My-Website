@@ -42,3 +42,22 @@ document.addEventListener('mousemove', (e) => {
     circle.style.left = x + 'px';
     circle.style.top = y + 'px';
 });
+
+const themeContainer = document.getElementById('themeContainer');
+const lightModeBtn = document.getElementById('lightModeBtn');
+const darkModeBtn = document.getElementById('darkModeBtn');
+
+function toggleTheme(isDarkMode) {
+    if (isDarkMode) {
+        themeContainer.classList.add('dark-theme');
+        lightModeBtn.classList.remove('light-mode-active');
+        darkModeBtn.classList.add('dark-mode-active');
+    } else {
+        themeContainer.classList.remove('dark-theme');
+        lightModeBtn.classList.add('light-mode-active');
+        darkModeBtn.classList.remove('dark-mode-active');
+    }
+}
+
+lightModeBtn.addEventListener('click', () => toggleTheme(false));
+darkModeBtn.addEventListener('click', () => toggleTheme(true));
