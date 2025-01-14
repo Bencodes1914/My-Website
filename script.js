@@ -13,9 +13,9 @@ document.querySelectorAll('.question-item').forEach(button => {
         container.classList.toggle('active');
     });
 });
-function switchLanguage(lang) {
+function switchTheme(lang) {
     // Remove active class from all buttons
-    document.querySelectorAll('.language-switch button').forEach(btn => {
+    document.querySelectorAll('.theme-switch button').forEach(btn => {
         btn.classList.remove('active');
     });
 
@@ -23,13 +23,13 @@ function switchLanguage(lang) {
     document.getElementById(`${lang}Btn`).classList.add('active');
 
     // Here you can add your language switching logic
-    if (lang === 'ru') {
+    if (lang === 'light') {
         // Switch content to Russian
-        console.log('Switching to Russian');
+        console.log('Switching to Light Theme');
         // You can add translations here
     } else {
         // Switch content to English
-        console.log('Switching to English');
+        console.log('Switching to Dark Theme');
         // You can add translations here
     }
 }
