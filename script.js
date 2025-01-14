@@ -59,5 +59,5 @@ function toggleTheme(isDarkMode) {
     }
 }
 
-lightModeBtn.addEventListener('click', () => toggleTheme(false));
+lightModeBtn.addEventListener('click', () => toggleTheme(true));
 darkModeBtn.addEventListener('click', () => toggleTheme(true));
