@@ -26,5 +26,10 @@ document.addEventListener('mousemove', (e) => {
 var icon = document.getElementById("icon");
 icon.onclick = function(){
     document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")){
+        icon.src = "sun-icon-clip-art-free-png"
+    }else{
+        icon.src = "pngtree-vector-new-moon-icon-png-image_943866.jpg";
+    }
 }
 

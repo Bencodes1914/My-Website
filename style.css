@@ -84,10 +84,11 @@ body {
     right: -100px;
     left: 60px;
     top: 0;
-    background: var(--primary-color);
+    color: var(--primary-color);
+    background: var(--secondary-color);
     padding: 0.5rem;
     border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px var(--secondary-color)(0,0,0,0.1);
     font-size: 0.9rem;
 }
 
