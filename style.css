@@ -6,7 +6,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: #ffffff;
+    background: var(--primary-color);
     min-height: 100vh;
     padding: 2rem;
 }
@@ -28,28 +28,29 @@ body {
 .theme-switch {
     display: flex;
     gap: 0.5rem;
-    background: #f5f5f5;
+    background: var(--primary-color);
     padding: 0.5rem;
     border-radius: 30px;
-}
-
-.theme-switch button {
-    border: none;
-    background: none;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.theme-switch button.active {
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .theme-switch button > img {
     background-color: transparent;
 }
 
+#icon{
+    width: 30px;
+    cursor: pointer;
+}
+
+:root{
+    --primary-color: white;
+    --secondary-color: black;
+}
+
+.dark-theme{
+    --primary-color: #000106;
+    --secondary-color:  #fff;
+}
 .menu-button {
     background: none;
     border: none;
@@ -83,7 +84,7 @@ body {
     right: -100px;
     left: 60px;
     top: 0;
-    background: #fff;
+    background: var(--primary-color);
     padding: 0.5rem;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -93,7 +94,7 @@ body {
 h1 {
     font-size: 2.5rem;
     line-height: 1.3;
-    color: #333;
+    color: var(--secondary-color);
     margin-bottom: 2rem;
     font-weight: 500;
 }
@@ -102,7 +103,7 @@ h1 {
     display: inline-flex;
     align-items: center;
     background: #c8ff00;
-    color: #000;
+    color: var(--secondary-color);
     padding: 1rem 2rem;
     border-radius: 30px;
     text-decoration: none;
@@ -121,8 +122,8 @@ h1 {
     margin-left: 0.5rem;
 }
 .wrapper {
-    background: #0a0a0a;
-    color: #ffffff;
+    background: black;
+    color:var(--primary-color) ;
     max-width: 1500px;
     padding: 4rem 2rem;
     margin: 0 auto;
@@ -144,6 +145,7 @@ h1 {
 
 .greeting-text {
     font-size: 2.5rem;
+    color: var(--primary-color);
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -179,7 +181,7 @@ h1 {
 }
 
 .skill-name {
-    color: #fff;
+    color: var(--primary-color);
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -193,10 +195,11 @@ h1 {
 }
 
 .project-card {
-    background: #151515;
+    background: var(--secondary-color);
     border-radius: 15px;
     padding: 1rem;
     position: relative;
+    border: 0.5px solid var(--primary-color);
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -237,7 +240,7 @@ h1 {
     margin: 0 auto;
     height: max-content;
     padding: 4rem 2rem;
-    background: #f8f8f8;
+    background: var(--primary-color);
 }
 
 .feedback-label {
@@ -256,7 +259,7 @@ h1 {
 .header-main {
     font-size: 2rem;
     font-weight: 600;
-    color: #1a1a1a;
+    color: var(--secondary-color);
     max-width: 300px;
 }
 
@@ -274,7 +277,7 @@ h1 {
 }
 
 .review-card {
-    background: #1a1a1a;
+    background: var(--secondary-color);
     border-radius: 15px;
     padding: 1.5rem;
     position: relative;
@@ -312,7 +315,7 @@ h1 {
 }
 
 .reviewer-name {
-    color: white;
+    color: var(--primary-color);
     font-weight: 500;
     margin-bottom: 0.2rem;
 }
@@ -340,8 +343,8 @@ h1 {
 }
 
 .outer-container {
-    background: #0a0a0a;
-    color: #ffffff;
+    background: var(--secondary-color);
+    color: var(--primary-color);
     margin: 0 auto;
     height: max-content;
     max-width: 1500px;
@@ -388,7 +391,7 @@ h1 {
 }
 
 .question-container {
-    border: 1px solid #222;
+    border: 1px solid var(--secondary-color);
     border-radius: 25px;
     transition: border-color 0.3s ease;
     overflow: hidden;
@@ -408,12 +411,12 @@ h1 {
     width: 100%;
     border: none;
     text-align: left;
-    color: white;
+    color: var(--primary-color);
 }
 
 .question-text {
     font-size: 0.95rem;
-    color: #fff;
+    color: var(--primary-color);
 }
 
 .arrow-icon {
@@ -436,7 +439,7 @@ h1 {
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     padding: 0 2rem;
-    color: white;
+    color: var(--primary-color);
 }
 
 .question-container.active .arrow-icon {
@@ -460,7 +463,7 @@ h1 {
 }
 
 .subscription-container {
-    background-color: white;
+    background-color: var(--primary-color);
     padding: 2rem;
     border-radius: 24px;
     text-align: center;
@@ -474,7 +477,7 @@ h1 {
 .icon {
     width: 130px;
     height: 125px;
-    background-color: #f0f0f0;
+    background-color: var(--secondary-color);
     border-radius: 50%;
     margin: 90px auto 1rem;
     display: flex;
@@ -502,8 +505,8 @@ h1 {
     padding: 12px 40px 12px 16px;
     border: none;
     border-radius: 24px;
-    background-color: #222;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     font-size: 0.9rem;
     outline: none;
 }
@@ -518,7 +521,7 @@ h1 {
     top: 50%;
     transform: translateY(-50%);
     background-color: #444;
-    color: white;
+    color: var(--primary-color);
     border: none;
     border-radius: 50%;
     width: 24px;
