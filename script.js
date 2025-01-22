@@ -27,7 +27,7 @@ var icon = document.getElementById("icon");
 icon.onclick = function(){
     document.body.classList.toggle("dark-theme");
     if(document.body.classList.contains("dark-theme")){
-        icon.src = "4586694-200.png"
+        icon.src = "SVG Export 128.svg"
     }else{
         icon.src = "SVG Export 109.svg";
     }
