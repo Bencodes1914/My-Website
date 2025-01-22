@@ -29,7 +29,7 @@ icon.onclick = function(){
     if(document.body.classList.contains("dark-theme")){
         icon.src = "4586694-200.png"
     }else{
-        icon.src = "pngtree-flattening-the-sun-image_1175082.jpg";
+        icon.src = "SVG Export 109.svg";
     }
 }
 
