@@ -27,9 +27,9 @@ var icon = document.getElementById("icon");
 icon.onclick = function(){
     document.body.classList.toggle("dark-theme");
     if(document.body.classList.contains("dark-theme")){
-        icon.src = "sun-icon-clip-art-free-png"
+        icon.src = "4586694-200.png"
     }else{
-        icon.src = "pngtree-vector-new-moon-icon-png-image_943866.jpg";
+        icon.src = "pngtree-flattening-the-sun-image_1175082.jpg";
     }
 }
 
